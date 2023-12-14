@@ -16,4 +16,7 @@ use App\Http\Controllers\TrainController;
 
 
 
-Route::get('/', [TrainController::class, 'index']);
+Route::get('/', [TrainController::class, 'index'])->name('index');
+Route::get('/today', [TrainController::class, 'todayTrains'])->name('today.trains');
+Route::get('/all', [TrainController::class, 'allTrains'])->name('all.trains');
+
